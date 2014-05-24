@@ -57,3 +57,6 @@ virt
 
 # Development database files
 *.sqlite3
+
+# Django settings files
+settings.py
