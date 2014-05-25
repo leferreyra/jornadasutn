@@ -1,5 +1,6 @@
 #encoding:utf-8
 from django.db import models
+from tinymce.models import HTMLField
 
 class Auspiciante(models.Model):
 	
@@ -23,7 +24,7 @@ class Jornada(models.Model):
 	
 	nombre = models.CharField(max_length=50)
 	logo = models.ImageField(upload_to='logos', verbose_name='Logo')
-	programa = models.TextField()
+	programa = HTMLField()
 	iframe_transmision = models.TextField(blank=True)
 	organizadores = models.ManyToManyField(Organizador)
 	auspiciantes = models.ManyToManyField(Auspiciante)

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jornadas UTN</title>
+
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+</head>
+<style type="text/css">
+	body {
+		padding-top: 50px;
+	}
+	.logo {
+		display: block;
+		height: 100px;
+		width: auto;
+		margin: 0 auto;
+	}
+	.header {
+		padding: 20px 0;
+	}
+	.header h1 {
+		text-align: center;
+	}
+	.programa, .organizadores, .auspiciantes {
+		padding: 70px 0;
+	}
+
+	.programa {
+		background-color: #e6e6e6;
+	}
+
+	.vivo iframe {
+		width: 100%;
+		height: 600px;
+	}
+
+	footer {
+		padding: 20px;
+		color: #ccc;
+		text-align: center;
+		background-color: #333;
+	}
+
+</style>
+<body>
+
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<ul class="nav navbar-nav pull-right">
+				<li>
+					<a href="#programa">Programa</a>
+				</li>
+				<li>
+					<a href="#organizadores">Organizadores</a>
+				</li>
+				<li>
+					<a href="#auspiciantes">Auspiciantes</a>
+				</li>
+				<li>
+					<a href="#vivo">En Vivo</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="header">
+		<div class="container">
+			<img src="{{MEDIA_URL}}{{jornada.logo}}" class='logo'>
+			<!-- <h1>{{jornada.nombre}}</h1> -->
+		</div>
+	</div>
+
+	<div class="programa" id="programa">
+		<div class="container">
+			{% autoescape off %}
+				{{jornada.programa}}
+			{% endautoescape %}
+		</div>
+	</div>
+
+	<div class="organizadores" id="organizadores">
+		<div class="container">
+		</div>
+	</div>
+
+	<div class="auspiciantes" id="auspiciantes">
+		<div class="container">
+		</div>
+	</div>
+
+	<div class="vivo" id='vivo'>
+		{% autoescape off %}
+			{{jornada.iframe_transmision}}
+		{% endautoescape %}
+	</div>
+
+	<footer>
+		<div class="container">
+			Desarrollado por w3bex
+		</div>
+	</footer>
+
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</body>
+</html>
