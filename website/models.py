@@ -24,6 +24,7 @@ class Jornada(models.Model):
 	
 	nombre = models.CharField(max_length=50)
 	logo = models.ImageField(upload_to='logos', verbose_name='Logo')
+	fecha = models.DateTimeField()
 	programa = HTMLField()
 	iframe_transmision = models.TextField(blank=True)
 	organizadores = models.ManyToManyField(Organizador)
