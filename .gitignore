@@ -60,3 +60,6 @@ virt
 
 # Django settings files
 settings.py
+
+#bd sql lite
+*.db
