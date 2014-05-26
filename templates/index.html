@@ -81,11 +81,17 @@
 
 	<div class="organizadores" id="organizadores">
 		<div class="container">
+			{% for org in jornada.organizadores %}
+				<img src="{{MEDIA_URL}}{{org.imagen}}" class='logo'>
+			{% endfor %}
 		</div>
 	</div>
 
 	<div class="auspiciantes" id="auspiciantes">
 		<div class="container">
+			{% for aus in jornada.auspiciantes %}
+				<img src="{{MEDIA_URL}}{{org.imagen}}" href={{aus.link}} class='logo'>
+			{% endfor %}
 		</div>
 	</div>
 
