@@ -6,7 +6,7 @@ class Auspiciante(models.Model):
 	
 	nombre = models.CharField(max_length=50)
 	imagen = models.ImageField(upload_to='auspiciantes', verbose_name='Imágen')
-	link = models.CharField(max_length=100)
+	link = models.CharField(max_length=100, blank=True)
 
 	def __unicode__(self):
 		return self.nombre
